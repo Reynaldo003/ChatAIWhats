@@ -232,7 +232,7 @@ def replace_start(s):
 
 def gpt(text, number, messageId, name):
     try:
-        OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+        OPENAI_API_KEY = "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"
         client = OpenAI(api_key=OPENAI_API_KEY)
         global CURRENT_NUMBER
         CURRENT_NUMBER = replace_start(number)
@@ -634,4 +634,5 @@ def get_ficha_tecnica(modelo):
     return FICHA_TECNICA.get(modelo, {"error": "Modelo no encontrado"})
 
 def get_horarios_disponibles(dia):
+
     return HORARIOS_DISPONIBLES.get(dia.lower(), [])
